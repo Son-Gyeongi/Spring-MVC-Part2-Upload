@@ -38,10 +38,11 @@ public class SpringUploadController {
         log.info("multipartFile = {}", file);
 
         // 파일에 값이 들어있으면
+        // MultipartFile 주요 메서드 getOriginalFilename(), transferTo()
         if (!file.isEmpty()) {
-            String fullPath = fileDir + file.getOriginalFilename();
+            String fullPath = fileDir + file.getOriginalFilename(); // file.getOriginalFilename() : 업로드 파일 명
             log.info("파일 저장 fullPath = {}", fullPath);
-            file.transferTo(new File(fullPath));
+            file.transferTo(new File(fullPath)); // file.transferTo() : 파일 저장
         }
 
         return "upload-form";
