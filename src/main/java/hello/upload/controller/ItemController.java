@@ -71,7 +71,7 @@ public class ItemController {
     }
 
     // 파일을 다운로드 받는 특별한 컨트롤러를 만들어야 한다.
-    // 이미지 다운로드
+    // 이미지 보여주기
     @ResponseBody
     @GetMapping("/images/{filename}")
     public Resource downloadImage(@PathVariable String filename) throws MalformedURLException {
