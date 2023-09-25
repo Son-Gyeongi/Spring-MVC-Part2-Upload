@@ -5,6 +5,7 @@ import lombok.Data;
 // 파일 업로드 - 예제로 구현하는 파일 업로드, 다운로드
 @Data
 public class UploadFile {
+    // 데이터 베이스에 저장하는 건 구분했다. uploadFileName, storeFileName 구분해서 저장했다.
 
     private String uploadFileName; // 고객이 업로드한 파일명
     private String storeFileName; // 서버 내부에서 관리하는 파일명
